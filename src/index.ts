@@ -7,7 +7,7 @@ const { intents, prefix, token } = config;
  let insultCounter = 0
  //Use Ctrl+P to search among the files and folders
 //Music time? https://gabrieltanner.org/blog/dicord-music-bot
-const queue = new Map();
+//const queue = new Map();
 
 const client = new Client({
   intents,
