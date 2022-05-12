@@ -1,46 +1,5 @@
-## Setup
-
-First of all, go to [discord developer dashboard](https://discord.com/developers/applications/) and choose the bot you want to host, go to the bot tab, and click on `Regenerate token`, and then copy the token.
-
-After this, go to the "Lock"-like tab on replit and here, in the `key` enter `DISCORD_TOKEN` and in the `value` field, enter the token you copied from discord developer dashboard.
-![image](https://i.postimg.cc/k5tMPRpk/image.png)
-
----
-
-## Configuration
-
-You can modify any kind of configuration in `src/config.ts`. DO NOT change any files in the `dist` directory as they are all generated files and should not be manually edited.
-
----
-
-## Commands
-
-In the template, the bot has 3 basic commands: -
-
-1. `help`: Shows the list of commands or details of a specific command.
-2. `say`: Repeats whatever the users tells it to.
-3. `ping`: Checks connectivity with discord servers.
-
-You can edit these commands and/or add more in `src/index.ts`. After creating the command in `src/index.ts`, go to `src/commands.ts` and to the json, add a new entry with the format
-```ts
-{
-  ...,
-  'command-name': {
-    aliases: ['these', 'are', 'optional'],
-    description: 'This command does xyz...',
-    format: 'command-name <my-args>'
-  }
-}
-```
-
-Here, `command-name` is the name of your new command, `aliases` is an array of the aliases (other ways to invoke this command). The `description` and `format` are required fields to display the command properly in the help embed.
-
-> **NOTE :** This is solely to add the command to the help embed, this does not affect the working of commands whatsoever, this only adds the command to help embeds.
-
----
-
-## Hosting
-
-Finally, once you are done writing your bot, first step is to compile it, for this, open the shell on the right hand side and run `npm run build`. This will compile your code and prepare it for running. After this, just press the run button and your bot is online! ![image](https://i.postimg.cc/dtbZkvKP/image.png)
-
-You can also turn on `Always On` to further improve your hosting experience.
+This is my bot, called Ladrian Bot. It is a simple program, mostly designed to send messages, nothing too complicated. It has several commands that users can activate, each doing unique things. It can also watch for certain things inside messages, and can respond to those.
+The design process for this bot was fairly simple. Well, I first had to create the application for the bot through Discord Developer Portal, where I got the invite link and the token that allows me to control the bot from VSCode in the first place. Once I had that created, I was able to use a template for a Discord bot, designed by Replit, then import that into VSCode. Therefore, the setup process was less of a pain than it could have been.
+From there, I was free to do what I wanted with the bot. Therefore, I, of course, wanted it to insult its users. I also wanted it to quote the Cosmere, as well as just allow the bot to send some other fun messages.
+If I'm going to be honest here, coming up with insults was the most annoying part of creating this program. Though, I did have Mr. Buckley's help with some of the more complicated parts, such as downloading and activating an extension that automatically formats my code, (yes, my code is pretty thanks to cheating-the extension is called Prettier by the way), and exporting my program to Github.
+In the end, this bot is simple. It doesn't have as much funtionality as other bots, but I enjoy this regardless. And, this is the first time I've ever designed something like this. So, perhaps, I can develop this, perhaps make it so that it can play music. But, for now, this is hopefully a satisfactory project, and something that I can look back on as my crowning achievement in Mr. Buckley's Computer Programming class.
