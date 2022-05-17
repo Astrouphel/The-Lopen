@@ -87,7 +87,7 @@ client.on("messageCreate", async (message) => {
       //Gets random quotes
       case "quote":
         let msgQ = await message.reply("Hold on...");
-        s;
+
         const randQuote = quotes[Math.floor(Math.random() * quotes.length)];
         await msgQ.edit(randQuote);
         break;
